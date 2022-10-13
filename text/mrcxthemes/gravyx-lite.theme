@@ -161,4 +161,4 @@ $widget.latency |[X27|[Y01|15&1
 $widget.topic |[Y23|[X12|21|15&1
 
 ;status bar room users formatting; &1 = User Count
-$widget.ucount |[Y01|[X55|21|15&1
+$widget.rusers |[Y01|[X55|21|15&1

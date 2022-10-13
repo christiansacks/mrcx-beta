@@ -113,7 +113,7 @@ $widget.area |[X01|[Y23|20|00 [lag:   ] [fools:  ]|[K
 $widget.topic |[Y23|[X23|20|15&1
 
 ;status bar room users formatting; &1 = User Count
-$widget.ucount |[Y23|[X19|20|15&1
+$widget.rusers |[Y23|[X19|20|15&1
 
 ; theme list string
 $theme.list |04Listing themes |08[|12&1|08]|04:

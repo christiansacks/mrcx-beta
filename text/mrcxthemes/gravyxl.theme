@@ -128,13 +128,13 @@ $widget.latency |[X74|[Y03|16|15&1
 $widget.area |[X01|[Y01|DFgravyxhdr.ans||[X01|[Y24|19|00 [bUf:   |19]|[K|16
 
 ;status bar topic formatting; &1 = Topic
-$widget.topic |[Y24|[X12|21|15&1
+$widget.topic |[Y24|[X12|21|15 &1
 
 ;status bar room users formatting; &1 = User Count
-$widget.ucount |[Y04|[X35|16|15&1
+$widget.rusers |[Y04|[X35|16|15&1
 
 ; room count
-$widget.rcount |[X45|[Y04|15
+$widget.rcount |[X45|[Y04|16|15
 
 ; theme list string
 $theme.list lIstIng thEmEs |08[|15&1|08]|07:

@@ -129,7 +129,7 @@ $widget.area |[X01|[Y01|DFgravyxhdr.ans|
 $widget.topic |[Y06|[X26|15|$C55&1
 
 ;status bar room users formatting; &1 = User Count
-$widget.ucount |[Y04|[X35|15&1
+$widget.rusers |[Y04|[X35|15&1
 
 ; room count
 $widget.rcount |[X45|[Y04|15

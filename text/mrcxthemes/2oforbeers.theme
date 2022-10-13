@@ -134,7 +134,7 @@ $widget.area |[X01|[Y01|DF2oforbeershdr.ans|
 $widget.topic |[Y08|[X26|15|$C55&1
 
 ;status bar room users formatting; &1 = User Count
-$widget.ucount |[Y06|[X77|15&1
+$widget.rusers |[Y06|[X77|15&1
 
 ; room count
 ;$widget.rcount |[X45|[Y05|15

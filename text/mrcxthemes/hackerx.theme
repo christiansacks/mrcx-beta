@@ -126,7 +126,7 @@ $widget.area |[X01|[Y01|DFhackerxhdr.asc|
 $widget.topic |[Y06|[X22|10&1
 
 ;status bar room users formatting; &1 = User Count
-;$widget.ucount |[Y23|[X19|15&1
+;$widget.rusers |[Y23|[X19|15&1
 
 ; theme list string
 $theme.list |02L1571N6 7H3M35 |08[|10&1|08]|02:
