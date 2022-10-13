@@ -1,0 +1,131 @@
+; mrcX Theme file - Darth Maul
+;
+; Comments start with ;
+; Mystic MCI codes are allowed
+
+$theme.name dmaul
+$theme.description Darth Maul mrcX configuration
+$theme.author MeaTLoTioN <ml@erb.pw>
+
+; Configuration Variables ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |12dead,|12weak,|12loud,|12pain
+
+; Johnny 5 support, &1 = Yes/No
+$cfg.johnny5 |12JOHNNY5 is alive: |15&1
+
+$ mention bell, &1 = on/off
+$cfg.mentionbell |04Beep on mention: |12&1
+
+; Stealth mode on/off, &1 = on/off
+$cfg.stealth |04Stealth mode: |12&1
+
+; Topic Display, &1 = On/Off
+$cfg.topicdisplay |12Topic display: |15&1
+
+; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
+$ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
+
+$ctcp.send |12[CTCP-SEND] &1 &2 &3
+
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command
+$ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+
+; Line error prefix
+$error.prefix |08!|04!|12! 
+
+; Error room name max length
+$error.roomlimit Upto 30 characters or I slaughter you
+
+; Error topic max length
+$error.topic Upto 55 characters and no more, or feel pain
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
+$msg.connecting |12&1 |04has entered |12#&2|04, |12mercy |04is for the |12weak! |08(|04Stealth: |12&3|08)
+
+; Help information
+$msg.helpinfo |04Use |12/? |04or |12/HELP |04for help. |08(|12MRC doesn't yet support encryption|08)|16
+
+; Latency report, &1 = latency
+$msg.latency |04Latency: |12&1
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |04You have left |12#&1 |04and joined |12#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats |04worlds|08(|12&1|08) |04places|08(|12&2|08) |04fools|08(|12&3|08) |04noise|08(|12&4|08)
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|04Population: |12#&1|08(|12&2|08)]
+
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|12&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|04&1|08] 
+
+; prompt &1 = name, &2 = room
+$prompt |[X01|[Y24|15&1 |07
+
+; Linewrap character
+$print.linewrap \ 
+
+; Line prefix string
+$print.prefix |08>|04>|12> |07
+
+; Mention Indicator
+$print.mention |14>
+
+; Time Stamp color, &1 = time
+$print.timestamp |04&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change |04Topic changed in |12#&1 |04by |12&2|04: |14&3
+
+; No topic string, pipe codes not allowed
+$topic.none !! topic is empty !!
+
+; Previous Topic
+$topic.previous |04prior topic: |12&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show |04topic for |12#&1 |04is |12&2
+
+; Screen Windows size
+$screen.size 1,22
+
+$widget.lagmeter |[X07|[Y23
+
+; low, med, bad
+$widget.lagmeter_low |15|20low
+$widget.lagmeter_med |15|20med
+$widget.lagmeter_high3 |15|20die
+
+; latency in ms, &1 = latency
+;$widget.latency |[X01|[Y01|15&1
+
+; status bar text
+$widget.text |[X01|[Y23|20|00 [lag:   ] [fools:  ]
+$widget.area |[X01|[Y23|20|00 [lag:   ] [fools:  ]|[K
+
+;status bar topic formatting; &1 = Topic
+$widget.topic |[Y23|[X23|20|15&1
+
+;status bar room users formatting; &1 = User Count
+$widget.ucount |[Y23|[X19|20|15&1
+
+; theme list string
+$theme.list |04Listing themes |08[|12&1|08]|04:
+
+; theme load string, &1 = theme name
+$theme.load |04Loaded theme: |12&1
+
+; theme reload string, &1 = theme name
+$theme.reload |04Reloaded theme: |12&1
+
+; Title Bar for help file (not yet implemented)
+$title.help |12Manual
+
+; Title Bar for scrollback viewer (not yet implemented)
+$title.scrollback |12Scrollback buffer

@@ -1,0 +1,144 @@
+; mrcX Theme file - HackerX
+;
+; Comments start with ;
+; Mystic MCI codes are allowed
+
+$theme.name hackerX
+$theme.description HackerX mrcX configuration
+$theme.author MeaTLoTioN <ml@erb.pw>
+
+; Configuration Variables ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |10null,|10low,|10med,|10high
+
+; Use 24 hour clock, &1 = Yes/No
+$cfg.clock24 24-Hour Clock: |15&1
+
+; Johnny 5 support, &1 = Yes/No
+$cfg.johnny5 |10JOHNNY5 is alive: |15&1
+
+$ mention bell, &1 = on/off
+$cfg.mentionbell |02Beep on mention: |10&1
+
+; Stealth mode on/off, &1 = on/off
+$cfg.stealth |02Stealth mode: |10&1
+
+; Topic Display, &1 = On/Off
+$cfg.topicdisplay |10Topic display: |15&1
+
+; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
+$ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
+
+$ctcp.send |12[CTCP-SEND] &1 &2 &3
+
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command
+$ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+
+; Line error prefix
+$error.prefix |08!|02!|10! 
+
+; Error room name max length
+$error.roomlimit Error: room name can be maximum of 30 characters
+
+; Error topic max length
+$error.topic Error: topic can be maximum of 55 characters
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
+$msg.connecting |10&1 |02has entered |10#&2|02 |08(|02Stealth: |10&3|08)
+
+; Help information
+$msg.helpinfo |02Use |10/? |02or |10/HELP |02for help. |08(|10MRC doesn't yet support encryption|08)|16
+
+; Latency report, &1 = latency
+$msg.latency |02Latency: |10&1
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |02You have left |10#&1 |02and joined |10#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats |02bbses|08(|10&1|08) |02rooms|08(|10&2|08) |02users|08(|10&3|08) |02activity|08(|10&4|08)
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|02users: |10#&1|08(|10&2|08)]
+
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|10&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|02&1|08] 
+
+; prompt &1 = name, &2 = room
+$prompt |[X01|[Y24|15&1 |07
+
+; Linewrap character
+$print.linewrap \ 
+
+; Line prefix string
+$print.prefix |08>|02>|10> |07
+
+; Mention Indicator
+$print.mention |14>
+
+; Time Stamp color, &1 = time
+$print.timestamp |02&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change |02Topic changed in |10#&1 |02by |10&2|02: |14&3
+
+; No topic string, pipe codes not allowed
+$topic.none No topic set 
+
+; Previous Topic
+$topic.previous |02prior topic: |10&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show |02topic for |10#&1 |02is |10&2
+
+; Screen Windows size
+$screen.size 7,23
+
+$widget.actmeter |[X27|[Y02
+$widget.actmeter0 |00                                             
+$widget.actmeter1 |10>>>>>>>>                                     
+$widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>               
+$widget.actmeter3 |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
+$widget.clock |[X74|[Y02|10&3
+
+; Positioning of the lagmeter
+$widget.lagmeter |[X27|[Y03
+
+; low, med, bad 
+$widget.lagmeter_low |10>>>>>>>>                                  
+$widget.lagmeter_med |10>>>>>>>>>>>>>>>>>>>>                      
+$widget.lagmeter_high |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; latency in ms, &1 = latency
+$widget.latency |[X74|[Y03|10&1
+
+; status bar text
+$widget.text |[X01|[Y01|DFhackerxhdr.asc|
+$widget.area |[X01|[Y01|DFhackerxhdr.asc|
+
+;status bar topic formatting; &1 = Topic
+$widget.topic |[Y06|[X22|10&1
+
+;status bar room users formatting; &1 = User Count
+;$widget.ucount |[Y23|[X19|15&1
+
+; theme list string
+$theme.list |02L1571N6 7H3M35 |08[|10&1|08]|02:
+
+; theme load string, &1 = theme name
+$theme.load |02Loaded theme: |10&1
+
+; theme reload string, &1 = theme name
+$theme.reload |02Reloaded theme: |10&1
+
+; Title Bar for help file (not yet implemented)
+$title.help |10Manual
+
+; Title Bar for scrollback viewer (not yet implemented)
+$title.scrollback |10Scrollback buffer

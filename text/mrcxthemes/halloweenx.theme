@@ -1,0 +1,150 @@
+; mrcX Theme file - HalloweenX
+;
+; Comments start with ;
+; Mystic MCI codes are allowed
+
+$theme.name halloweenX
+$theme.description HalloweenX mrcX configuration
+$theme.author MeaTLoTioN <ml@erb.pw>
+
+; Configuration Variables ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |14null,|14low,|14med,|14high
+
+; Use 24 hour clock, &1 = Yes/No
+$cfg.clock24 24-Hour Clock: |15&1
+
+; Johnny 5 support, &1 = Yes/No
+$cfg.johnny5 |06JOHNNY5 is alive: |14&1
+
+$ mention bell, &1 = on/off
+$cfg.mentionbell |06Beep on mention: |14&1
+
+; Stealth mode on/off, &1 = on/off
+$cfg.stealth |06Stealth mode: |14&1
+
+; Topic Display, &1 = On/Off
+$cfg.topicdisplay |06Topic display: |14&1
+
+; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
+$ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
+
+$ctcp.send |12[CTCP-SEND] &1 &2 &3
+
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command
+$ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+
+; Line error prefix
+$error.prefix |08!|06!|14! 
+
+; Error room name max length
+$error.roomlimit |14Error: |06room name can be maximum of 30 characters
+
+; Error topic max length
+$error.topic |14Error: |06topic can be maximum of 55 characters
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
+$msg.connecting |14&1 |06has entered |14#&2|06 |08(|06Stealth: |14&3|08)
+
+; Help information
+$msg.helpinfo |06Use |14/? |06or |14/HELP |06for help. |08(|14MRC doesn't yet support encryption|08)|16
+
+; Latency report, &1 = latency
+$msg.latency |06Latency: |14&1
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |06You have left |14#&1 |06and joined |14#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats |06houses|08(|14&1|08) |06covens|08(|14&2|08) |06witches|08(|14&3|08) |06spells|08(|14&4|08)
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|06witches: |14#&1|08(|14&2|08)]
+
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|14&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|06&1|08] 
+
+; prompt &1 = name, &2 = room
+$prompt |[X01|[Y24|15&1 |07
+
+; Linewrap character
+$print.linewrap \ 
+
+; Line prefix string
+$print.prefix |08>|06>|14> |07
+
+; Mention Indicator
+$print.mention |14>
+
+; Time Stamp color, &1 = time
+$print.timestamp |06&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change |06Topic changed in |14#&1 |06by |14&2|06: |14&3
+
+; No topic string, pipe codes not allowed
+$topic.none No topic set 
+
+; Previous Topic
+$topic.previous |06prior topic: |14&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show |06topic for |14#&1 |06is |14&2
+
+; Screen Windows size
+$screen.size 7,23
+
+$widget.actmeter |[X35|[Y02
+$widget.actmeter0 |00                                    
+$widget.actmeter1 |09>>>>>>>>                            
+$widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>                
+$widget.actmeter3 |14>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
+$widget.clock |[X74|[Y02|15&3
+
+; Positioning of the lagmeter
+$widget.lagmeter |[X35|[Y03
+
+; low, med, bad 
+$widget.lagmeter_low |10>>>>>>>>                            
+$widget.lagmeter_med |14>>>>>>>>>>>>>>>>>>>>                
+$widget.lagmeter_high |12>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; latency in ms, &1 = latency
+$widget.latency |[X74|[Y03|15&1
+
+; status bar text
+$widget.text |[X01|[Y01|DFhalloweenhdr.ans|
+$widget.area |[X01|[Y01|DFhalloweenhdr.ans|
+
+;status bar topic formatting; &1 = Topic, &2 = room
+$widget.topic |[Y06|[X30|15&1
+
+;status bar room users formatting; &1 = User Count
+$widget.ucount |[Y04|[X39|15&1
+
+; room count
+$widget.rcount |[X50|[Y04|15
+
+; theme list string, &1 = Theme name
+$theme.list |06Listing themes |08[|14&1|08]|06:
+
+; theme showing string, &1 = theme name
+$theme.show Displaying theme: |15&1
+
+; theme load string, &1 = theme name
+$theme.load |06Loaded theme: |14&1
+
+; theme reload string, &1 = theme name
+$theme.reload |06Reloaded theme: |14&1
+
+; Title Bar for help file (not yet implemented)
+$title.help |14Manual
+
+; Title Bar for scrollback viewer (not yet implemented)
+$title.scrollback |14Scrollback buffer

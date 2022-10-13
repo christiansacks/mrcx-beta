@@ -1,0 +1,164 @@
+; mrcX Theme file - gravyX lite
+;
+; Comments start with ;
+; Use |[K to clear to end of line
+; Watch out for trailing spaces -- sometimes this may erase things you intended
+; to show.
+; Mystic MCI codes are allowed
+
+$theme.name gravyX-lite
+$theme.description gravyX lite theme
+$theme.author MeaTLoTioN <ml@erb.pw>
+
+; Configuration Variables ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |13nUl,|13lOw,|13mEd,|13wOw
+
+; Use 24 hour clock, &1 = Yes/No
+$cfg.timestamp UsE tImEstAmps: |15&1
+
+; Use 24 hour clock, &1 = Yes/No
+$cfg.clock24 24-hOUr clOck: |15&1
+
+; Johnny 5 support, &1 = Yes/No
+$cfg.johnny5 |13JOHNNY5 is alive: |15&1
+
+$ mention bell, &1 = on/off
+$cfg.mentionbell |05Beep on mention: |13&1
+
+; Stealth mode on/off, &1 = on/off
+$cfg.stealth |05Stealth mode: |13&1
+
+; Topic Display, &1 = On/Off
+$cfg.topicdisplay |13Topic display: |15&1
+
+; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
+$ctcp.request |13[CTCP-REQUEST] &1 &2 &3 &4
+
+$ctcp.send |13[CTCP-SEND] &1 &2 &3
+
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command
+$ctcp.reply |13[CTCP-REPLY] &1 &2 &3
+
+; Line error prefix
+$error.prefix |08!|05!|13!
+
+; Error room name max length
+$error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx!
+
+; Error topic max length
+$error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm.
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
+$msg.connecting cOnnEctIng tO MRC As |15&1 |07In dEfAUlt rOOm |15#&2 |07(stEAlth: |11&3|07)
+
+; Help information
+$msg.helpinfo |05UsE |13/? |05Or |13/HELP |05fOr hElp. |08(|13MRC dOEsn't yEt sUppOrt EncryptIOn|08)|16
+
+; Latency report, &1 = latency
+$msg.latency |05lAtEncY: |13&1
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |05yOU hAvE lEft |13#&1 |05And jOInEd |13#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats |05bbsEs|08(|13&1|08) |05rOOms|08(|13&2|08) |05UsErs|08(|13&3|08) |05ActIvIty|08(|13&4|08)
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|05UsErs: |13#&1|08(|13&2|08)]
+
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|13&1|08]
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|05&1|08]
+
+; prompt &1 = name, &2 = room
+$prompt |[X01|[Y24|15&1 |07
+
+; Linewrap character
+$print.linewrap \ 
+
+; Line prefix string
+$print.prefix |08>|05>|13> |07
+
+; Mention Indicator
+$print.mention |14>
+
+; Time Stamp color, &1 = time
+$print.timestamp |05&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change |05tOpIc chAngEd In |13#&1 |05by |13&2|05: |14&3
+
+; No topic string, pipe codes not allowed
+$topic.none >> tOpIc Is Empty <<
+
+; Previous Topic
+$topic.previous |05prEvIOUs tOpIc: |13&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show |05tOpIc fOr |13#&1 |05Is |13&2
+
+; Screen Windows size
+$screen.size 2,22
+
+; theme count
+;$theme.count tOtAl thEmEs: |15&1
+
+; theme list string
+$theme.list lIstIng thEmEs |08[|15&1|08]|07:
+
+; theme load string, &1 = theme name
+$theme.load lOAdEd thEmE: |15&1
+
+; theme not found
+$theme.notfound thEmE nOt fOUnd: |15&1
+
+; theme reload string, &1 = theme name
+$theme.reload rElOAdEd thEmE: |15&1
+
+; widget area text
+; this draws the entire area for widgets or display an ansi!
+$widget.area |[X01|[Y01|19|00 [     ][UsE:   ][lAg:   /   ms|21][rOOm:        ][UsErs:  ]|[K|[X01|[Y23|19|00 [bUf:   |19]|[K
+
+; widget activity meter
+$widget.actmeter |[X14|[Y01
+$widget.actmeter0 |19|15nUl
+$widget.actmeter1 |19|15lOw
+$widget.actmeter2 |19|15mEd
+$widget.actmeter3 |19|15wOw
+
+; widget buffer count
+$widget.bufcount |[X07|[Y23|19|15
+
+; positioning/color of clock
+; &1 = user (6 characters), &2 = 12 hour, &3 = 24 hour
+$widget.clock |[Y01|[X03|19|15&3
+
+; room name, &1 = room name
+$widget.room |[X39|[Y01|21|15#&1
+
+; max length of room
+$widget.roomlen 7
+
+; room count
+;$widget.rcount |[X18|[Y01|17|15
+
+; Positioning of the lagmeter
+$widget.lagmeter |[X23|[Y01
+
+; low, med, bad
+$widget.lagmeter_low |15|19lOw
+$widget.lagmeter_med |15|19mEd
+$widget.lagmeter_high3 |15|19sOs
+
+; latency in ms, &1 = latency
+$widget.latency |[X27|[Y01|15&1
+
+;status bar topic formatting; &1 = Topic
+$widget.topic |[Y23|[X12|21|15&1
+
+;status bar room users formatting; &1 = User Count
+$widget.ucount |[Y01|[X55|21|15&1

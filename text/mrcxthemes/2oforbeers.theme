@@ -1,0 +1,158 @@
+; mrcX Theme file - 2o fOr bEErs
+;
+; Comments start with ;
+; Mystic MCI codes are allowed
+
+$theme.name 2oforbeers
+$theme.description 2o fOr bEErs
+$theme.author MeaTLoTioN <ml@erb.pw>
+
+; Configuration Variables ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |08nUll,|10lOw,|14mEd,|12hIgh
+
+; Use 24 hour clock, &1 = Yes/No
+$cfg.clock24 24-Hour Clock: |15&1
+
+; Johnny 5 support, &1 = Yes/No
+$cfg.johnny5 JOHNNY5 is alive: |12&1
+
+$ mention bell, &1 = on/off
+$cfg.mentionbell Beep on mention: |15&1
+
+; Stealth mode on/off, &1 = on/off
+$cfg.stealth |02stEAlth mOdE: |10&1
+
+; Topic Display, &1 = On/Off
+$cfg.topicdisplay tOpIc dIsplAy: |15&1
+
+; CTCP send out string, &1 = from &2 = to, &3 command + opts
+$ctcp.request |08[|04ctcp|08(|10&2|08)] |07&3
+
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command, &4 = reply
+$ctcp.reply |10[CTCP-REPLY] |02&1 |10&2 |14&3 |15&4
+
+; Line error prefix
+$error.prefix |08!|04!|12! 
+
+; Error room name max length
+$error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx
+
+; Error topic max length
+$error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
+$msg.connecting |10c|02OnnEctIng |10t|02O |15MRC |10A|02s |10&1 |10I|02n |10d|02EfAUlt |10r|02OOm |15#&2 |08(|02stEAlth: |10&3|08)
+
+; Help information
+$msg.helpinfo |10U|02sE |15/? |10O|02r |15/HELP |10f|02Or hElp. |24|08(|12MRC dOEsn't yEt sUppOrt EncrYptIOn|08)|16
+
+; Latency report, &1 = latency
+$msg.latency |10lAtEncY: |15&1
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |07yOU hAvE lEft |15#&1 |07And jOInEd |15#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats |10bbsEs|08(|10&1|08) |10r00ms|08(|10&2|08) |10UsErs|08(|10&3|08) |10ActIvIty|08(|10&4|08)
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|10U|02sErs: |15#&1|08(|15&2|08)]
+
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|10&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|02&1|08] 
+
+; prompt &1 = name, &2 = room
+$prompt |[X01|[Y24|15&1 |07
+
+; Linewrap character
+$print.linewrap \ 
+
+; Line prefix string
+$print.prefix |08>|02>|10> |07
+
+; Mention Indicator
+$print.mention |24|14$
+
+; Time Stamp color, &1 = time
+$print.timestamp |02&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change |10&2 |10j|02Ust |10c|02hAngEd |10t|02hE |10t|02OpIc
+
+; No topic string, pipe codes not allowed
+$topic.none                  >>> nO tOpIc sEt <<<
+
+; Previous Topic
+$topic.previous prIOr TOpIc: |10&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show |10tOpIc fOr |15#&1 |10Is |15&2
+
+; Screen Windows size
+$screen.size 9,23
+
+$widget.actmeter |[X34|[Y03
+$widget.actmeter0 |00                                      
+$widget.actmeter1 |09>>>>>>>>                              
+$widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>                  
+$widget.actmeter3 |14>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
+$widget.clock |[X74|[Y03|15&3
+
+; room name, &1 = room name
+$widget.room |[X35|[Y06|15#&1
+
+; max length of room
+$widget.roomlen 30
+
+; room count
+;$widget.rcount |[X18|[Y01|17|15
+
+; Positioning of the lagmeter
+$widget.lagmeter |[X34|[Y04
+
+; low, med, bad 
+$widget.lagmeter_low |10>>>>>>>>                              
+$widget.lagmeter_med |14>>>>>>>>>>>>>>>>>>>>                  
+$widget.lagmeter_high |12>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; latency in ms, &1 = latency
+$widget.latency |[X74|[Y04|15&1
+
+; status bar text
+; this draws the entire area of status bar(s) or display an ansi!
+; Use Mystic's display file MCI code (I *think* it might work)
+$widget.area |[X01|[Y01|DF2oforbeershdr.ans|
+
+;status bar topic formatting; &1 = Topic
+$widget.topic |[Y08|[X26|15|$C55&1
+
+;status bar room users formatting; &1 = User Count
+$widget.ucount |[Y06|[X77|15&1
+
+; room count
+;$widget.rcount |[X45|[Y05|15
+
+; theme list string
+$theme.list lIstIng thEmEs |08[|15&1|08]|07:
+
+; theme showing string, &1 = theme name
+$theme.show dIsplAyIng thEmE: |15&1
+
+; theme load string, &1 = theme name
+$theme.load lOAdEd thEmE: |15&1
+
+; theme reload string, &1 = theme name
+$theme.reload rElOAdEd thEmE: |15&1
+
+; Title Bar for help file (not yet implemented)
+$title.help |15mAnUAl
+
+; Title Bar for scrollback viewer (not yet implemented)
+$title.scrollback |15scrOllbAck bUffEr
