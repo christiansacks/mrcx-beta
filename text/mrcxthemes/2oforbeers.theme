@@ -7,31 +7,51 @@ $theme.name 2oforbeers
 $theme.description 2o fOr bEErs
 $theme.author MeaTLoTioN <ml@erb.pw>
 
-; Configuration Variables ----------------------------------------------------
+$theme.dinfo |10t|02hEmE |10I|02nfOrmAtIOn:
+$theme.dname |10n|02AmE         |08-> |10&1
+$theme.dauth |10A|02UthOr       |08-> |10&1
+$theme.ddesc |10d|02EscrIptIOn  |08-> |10&1
+$theme.dnumb |10s|02trIng cOUnt |08-> |10&1
+
+; Required Theme Strings ----------------------------------------------------
 
 ; Activity Level Meter
 $activity.meter |08nUll,|10lOw,|14mEd,|12hIgh
 
-; Use 24 hour clock, &1 = Yes/No
-$cfg.clock24 24-Hour Clock: |15&1
+; Listing for /SET values
+$cfg.list |02List of current |10/SET |02values for your account (see help for details)
+$cfg.nickcolor |08[|10NICKCOLOR  |08] |02Nickname colour |08-> &1
+$cfg.nicklt |08[|10NICKLT     |08] |02Nick (left)     |08-> &1
+$cfg.nickrt |08[|10NICKRT     |08] |02Nick (right)    |08-> &1
+$cfg.defaultroom |08[|10DEFAULTRM  |08] |02Default room    |08-> |15&1
+$cfg.timestamp |08[|10TIMESTAMP  |08] |02Use time stamps |08-> |15&1
+$cfg.clock24 |08[|10CLOCK24    |08] |0224-hour clock   |08-> |15&1
+$cfg.lowrefresh |08[|10LOWREFRESH |08] |02Use low refresh |08-> |15&1
+$cfg.topicshow |08[|10TOPICSHOW  |08] |02Show the topic  |08-> |15&1
+$cfg.johnny5 |08[|10JOHNNY5    |08] |02Use Johnny5     |08-> |15&1
+$cfg.mentionbell |08[|10MENTIONBELL|08] |02Beep on mention |08-> |15&1
+$cfg.stealth |08[|10STEALTH    |08] |02Stealth mode    |08-> |15&1
+$cfg.topicreport |08[|10TOPICREPORT|08] |02Topic reporting |08-> |15&1
+$cfg.act1 |08[|10ACT1|08] |08-> |15
+$cfg.act2 |08[|10ACT2|08] |08-> |15
+$cfg.act3 |08[|10ACT3|08] |08-> |15
+$cfg.act4 |08[|10ACT4|08] |08-> |15
+$cfg.act5 |08[|10ACT5|08] |08-> |15
 
-; Johnny 5 support, &1 = Yes/No
-$cfg.johnny5 JOHNNY5 is alive: |12&1
+; displayed when user resets all settings to defaults
+$cfg.reset |03Configuration reset to defaults.
+$cfg.resetconfirm Type |15/resetall |03again within |1215 secs |03to reset your account to defaults.
 
-$ mention bell, &1 = on/off
-$cfg.mentionbell Beep on mention: |15&1
+; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
+$ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
 
-; Stealth mode on/off, &1 = on/off
-$cfg.stealth |02stEAlth mOdE: |10&1
+; CTCP Send string, &1 = target, &2 command, &3 options
+$ctcp.send |12[CTCP-SEND] &1 &2 &3
 
-; Topic Display, &1 = On/Off
-$cfg.topicdisplay tOpIc dIsplAy: |15&1
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command
+$ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+$ctcp.stealth |12[CTCP-STEALTHED] &1 &2 &3 &4
 
-; CTCP send out string, &1 = from &2 = to, &3 command + opts
-$ctcp.request |08[|04ctcp|08(|10&2|08)] |07&3
-
-; CTCP reply prefix, &1 = from, &2 = to, &3 = command, &4 = reply
-$ctcp.reply |10[CTCP-REPLY] |02&1 |10&2 |14&3 |15&4
 
 ; Line error prefix
 $error.prefix |08!|04!|12! 
@@ -42,6 +62,15 @@ $error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx
 ; Error topic max length
 $error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm
 
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|10&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|02&1|08] 
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|10U|02sErs: |15#&1|08(|15&2|08)]
+
 ; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
 $msg.connecting |10c|02OnnEctIng |10t|02O |15MRC |10A|02s |10&1 |10I|02n |10d|02EfAUlt |10r|02OOm |15#&2 |08(|02stEAlth: |10&3|08)
 
@@ -51,20 +80,14 @@ $msg.helpinfo |10U|02sE |15/? |10O|02r |15/HELP |10f|02Or hElp. |24|08(|12MRC dO
 ; Latency report, &1 = latency
 $msg.latency |10lAtEncY: |15&1
 
+; Low refresh message, shows on startup to users w/ "lowrefresh" on
+$msg.lowrefresh |02Running low refresh rate for slower connections.
+
 ; Room change, &1 = old room, &2 = new room
 $msg.roomchange |07yOU hAvE lEft |15#&1 |07And jOInEd |15#&2
 
 ; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
 $msg.stats |10bbsEs|08(|10&1|08) |10r00ms|08(|10&2|08) |10UsErs|08(|10&3|08) |10ActIvIty|08(|10&4|08)
-
-; LUSERS command Users room/no of users
-$lusers.count |08[|10U|02sErs: |15#&1|08(|15&2|08)]
-
-; LUSERS command current entry = me, &1 = name
-$list.highlight |08[|10&1|08] 
-
-; LUSERS command current entry != me, &1 = name
-$list.item |08[|02&1|08] 
 
 ; prompt &1 = name, &2 = room
 $prompt |[X01|[Y24|15&1 |07
@@ -73,7 +96,7 @@ $prompt |[X01|[Y24|15&1 |07
 $print.linewrap \ 
 
 ; Line prefix string
-$print.prefix |08>|02>|10> |07
+$print.prefix |08>|02>|10> |02
 
 ; Mention Indicator
 $print.mention |24|14$
@@ -96,11 +119,36 @@ $topic.show |10tOpIc fOr |15#&1 |10Is |15&2
 ; Screen Windows size
 $screen.size 9,23
 
+; theme list string
+$theme.list |02lIstIng thEmEs |08[|15&1|08]|07:
+
+; theme load string, &1 = theme name
+$theme.load |02lOAdEd thEmE: |15&1
+
+; theme not found
+$theme.notfound |02thEmE nOt fOUnd: |10&1
+
+; theme reload string, &1 = theme name
+$theme.reload |02rElOAdEd thEmE: |15&1
+
+; Optional Theme Strings ----------------------------------------------------
+
+; status bar text
+; this draws the entire area of status bar(s) or display an ansi!
+; Use Mystic's display file MCI code (I *think* it might work)
+$widget.area |[X01|[Y01|DF2oforbeershdr.ans|
+
 $widget.actmeter |[X34|[Y03
 $widget.actmeter0 |00                                      
 $widget.actmeter1 |09>>>>>>>>                              
 $widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>                  
 $widget.actmeter3 |14>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; BBS count widget
+;$widget.bbses |[X18|[Y22|17|10
+
+; widget buffer count
+;$widget.bufcount |[X07|[Y24|19|15
 
 ; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
 $widget.clock |[X74|[Y03|15&3
@@ -114,6 +162,9 @@ $widget.roomlen 30
 ; room count
 ;$widget.rcount |[X18|[Y01|17|15
 
+; latency in ms, &1 = latency
+$widget.latency |[X74|[Y04|15&1
+
 ; Positioning of the lagmeter
 $widget.lagmeter |[X34|[Y04
 
@@ -122,37 +173,14 @@ $widget.lagmeter_low |10>>>>>>>>
 $widget.lagmeter_med |14>>>>>>>>>>>>>>>>>>>>                  
 $widget.lagmeter_high |12>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-; latency in ms, &1 = latency
-$widget.latency |[X74|[Y04|15&1
-
-; status bar text
-; this draws the entire area of status bar(s) or display an ansi!
-; Use Mystic's display file MCI code (I *think* it might work)
-$widget.area |[X01|[Y01|DF2oforbeershdr.ans|
-
 ;status bar topic formatting; &1 = Topic
 $widget.topic |[Y08|[X26|15|$C55&1
+
+; status bar online users (in any room)
+;$widget.ousers |[X48|[Y22|17|10
 
 ;status bar room users formatting; &1 = User Count
 $widget.rusers |[Y06|[X77|15&1
 
 ; room count
 ;$widget.rcount |[X45|[Y05|15
-
-; theme list string
-$theme.list lIstIng thEmEs |08[|15&1|08]|07:
-
-; theme showing string, &1 = theme name
-$theme.show dIsplAyIng thEmE: |15&1
-
-; theme load string, &1 = theme name
-$theme.load lOAdEd thEmE: |15&1
-
-; theme reload string, &1 = theme name
-$theme.reload rElOAdEd thEmE: |15&1
-
-; Title Bar for help file (not yet implemented)
-$title.help |15mAnUAl
-
-; Title Bar for scrollback viewer (not yet implemented)
-$title.scrollback |15scrOllbAck bUffEr

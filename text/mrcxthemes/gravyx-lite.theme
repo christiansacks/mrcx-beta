@@ -10,36 +10,50 @@ $theme.name gravyX-lite
 $theme.description gravyX lite theme
 $theme.author MeaTLoTioN <ml@erb.pw>
 
+$theme.dinfo theme information:
+$theme.dname |05name         |08-> |13&1
+$theme.dauth |05author       |08-> |13&1
+$theme.ddesc |05description  |08-> |13&1
+$theme.dnumb |05string count |08-> |13&1
+
 ; Configuration Variables ----------------------------------------------------
 
 ; Activity Level Meter
 $activity.meter |13nUl,|13lOw,|13mEd,|13wOw
 
-; Use 24 hour clock, &1 = Yes/No
-$cfg.timestamp UsE tImEstAmps: |15&1
+; Listing for /SET values
+$cfg.list |05List of current |13/SET |05values for your account (see help for details)
+$cfg.nickcolor |08[|13NICKCOLOR  |08] |05Nickname colour |08-> &1
+$cfg.nicklt |08[|13NICKLT     |08] |05Nick (left)     |08-> &1
+$cfg.nickrt |08[|13NICKRT     |08] |05Nick (right)    |08-> &1
+$cfg.defaultroom |08[|13DEFAULTRM  |08] |05Default room    |08-> |15&1
+$cfg.timestamp |08[|13TIMESTAMP  |08] |05Use time stamps |08-> |15&1
+$cfg.clock24 |08[|13CLOCK24    |08] |0524-hour clock   |08-> |15&1
+$cfg.lowrefresh |08[|13LOWREFRESH |08] |05Use low refresh |08-> |15&1
+$cfg.topicshow |08[|13TOPICSHOW  |08] |05Show the topic  |08-> |15&1
+$cfg.johnny5 |08[|13JOHNNY5    |08] |05Use Johnny5     |08-> |15&1
+$cfg.mentionbell |08[|13MENTIONBELL|08] |05Beep on mention |08-> |15&1
+$cfg.stealth |08[|13STEALTH    |08] |05Stealth mode    |08-> |15&1
+$cfg.topicreport |08[|13TOPICREPORT|08] |05Topic reporting |08-> |15&1
+$cfg.act1 |08[|13ACT1|08] |08-> |15
+$cfg.act2 |08[|13ACT2|08] |08-> |15
+$cfg.act3 |08[|13ACT3|08] |08-> |15
+$cfg.act4 |08[|13ACT4|08] |08-> |15
+$cfg.act5 |08[|13ACT5|08] |08-> |15
 
-; Use 24 hour clock, &1 = Yes/No
-$cfg.clock24 24-hOUr clOck: |15&1
-
-; Johnny 5 support, &1 = Yes/No
-$cfg.johnny5 |13JOHNNY5 is alive: |15&1
-
-$ mention bell, &1 = on/off
-$cfg.mentionbell |05Beep on mention: |13&1
-
-; Stealth mode on/off, &1 = on/off
-$cfg.stealth |05Stealth mode: |13&1
-
-; Topic Display, &1 = On/Off
-$cfg.topicdisplay |13Topic display: |15&1
+; displayed when user resets all settings to defaults
+$cfg.reset |03Configuration reset to defaults.
+$cfg.resetconfirm Type |15/resetall |03again within |1315 secs |03to reset your account to defaults.
 
 ; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
 $ctcp.request |13[CTCP-REQUEST] &1 &2 &3 &4
 
+; CTCP Send string, &1 = target, &2 command, &3 options
 $ctcp.send |13[CTCP-SEND] &1 &2 &3
 
 ; CTCP reply prefix, &1 = from, &2 = to, &3 = command
 $ctcp.reply |13[CTCP-REPLY] &1 &2 &3
+$ctcp.stealth |13[CTCP-STEALTHED] &1 &2 &3 &4
 
 ; Line error prefix
 $error.prefix |08!|05!|13!
@@ -50,6 +64,15 @@ $error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx!
 ; Error topic max length
 $error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm.
 
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|13&1|08]
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|05&1|08]
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|05UsErs: |13#&1|08(|13&2|08)]
+
 ; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
 $msg.connecting cOnnEctIng tO MRC As |15&1 |07In dEfAUlt rOOm |15#&2 |07(stEAlth: |11&3|07)
 
@@ -59,20 +82,17 @@ $msg.helpinfo |05UsE |13/? |05Or |13/HELP |05fOr hElp. |08(|13MRC dOEsn't yEt sU
 ; Latency report, &1 = latency
 $msg.latency |05lAtEncY: |13&1
 
+; Low refresh message, shows on startup to users w/ "lowrefresh" on
+$msg.lowrefresh |05Running low refresh rate for slower connections.
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |05You have left |13#&1 |05and joined |13#&2
+
 ; Room change, &1 = old room, &2 = new room
 $msg.roomchange |05yOU hAvE lEft |13#&1 |05And jOInEd |13#&2
 
 ; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
 $msg.stats |05bbsEs|08(|13&1|08) |05rOOms|08(|13&2|08) |05UsErs|08(|13&3|08) |05ActIvIty|08(|13&4|08)
-
-; LUSERS command Users room/no of users
-$lusers.count |08[|05UsErs: |13#&1|08(|13&2|08)]
-
-; LUSERS command current entry = me, &1 = name
-$list.highlight |08[|13&1|08]
-
-; LUSERS command current entry != me, &1 = name
-$list.item |08[|05&1|08]
 
 ; prompt &1 = name, &2 = room
 $prompt |[X01|[Y24|15&1 |07
@@ -81,7 +101,7 @@ $prompt |[X01|[Y24|15&1 |07
 $print.linewrap \ 
 
 ; Line prefix string
-$print.prefix |08>|05>|13> |07
+$print.prefix |08>|05>|13> |05
 
 ; Mention Indicator
 $print.mention |14>
@@ -104,9 +124,6 @@ $topic.show |05tOpIc fOr |13#&1 |05Is |13&2
 ; Screen Windows size
 $screen.size 2,22
 
-; theme count
-;$theme.count tOtAl thEmEs: |15&1
-
 ; theme list string
 $theme.list lIstIng thEmEs |08[|15&1|08]|07:
 
@@ -117,7 +134,12 @@ $theme.load lOAdEd thEmE: |15&1
 $theme.notfound thEmE nOt fOUnd: |15&1
 
 ; theme reload string, &1 = theme name
-$theme.reload rElOAdEd thEmE: |15&1
+$theme.reload |05rElOAdEd thEmE: |13&1
+
+; theme count
+;$theme.count tOtAl thEmEs: |15&1
+
+; Optional Theme Strings ----------------------------------------------------
 
 ; widget area text
 ; this draws the entire area for widgets or display an ansi!
@@ -130,11 +152,13 @@ $widget.actmeter1 |19|15lOw
 $widget.actmeter2 |19|15mEd
 $widget.actmeter3 |19|15wOw
 
+; BBS count widget
+;$widget.bbses |[X18|[Y22|17|10
+
 ; widget buffer count
 $widget.bufcount |[X07|[Y23|19|15
 
-; positioning/color of clock
-; &1 = user (6 characters), &2 = 12 hour, &3 = 24 hour
+; positioning/color of clock, &1 = user (6 characters), &2 = 12 hour, &3 = 24 hour
 $widget.clock |[Y01|[X03|19|15&3
 
 ; room name, &1 = room name
@@ -146,6 +170,9 @@ $widget.roomlen 7
 ; room count
 ;$widget.rcount |[X18|[Y01|17|15
 
+; latency in ms, &1 = latency
+$widget.latency |[X27|[Y01|19|15&1
+
 ; Positioning of the lagmeter
 $widget.lagmeter |[X23|[Y01
 
@@ -154,11 +181,11 @@ $widget.lagmeter_low |15|19lOw
 $widget.lagmeter_med |15|19mEd
 $widget.lagmeter_high3 |15|19sOs
 
-; latency in ms, &1 = latency
-$widget.latency |[X27|[Y01|15&1
-
 ;status bar topic formatting; &1 = Topic
 $widget.topic |[Y23|[X12|21|15&1
+
+; status bar online users (in any room)
+;$widget.ousers |[X48|[Y22|17|10
 
 ;status bar room users formatting; &1 = User Count
 $widget.rusers |[Y01|[X55|21|15&1

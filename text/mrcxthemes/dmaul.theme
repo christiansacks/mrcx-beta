@@ -1,36 +1,59 @@
 ; mrcX Theme file - Darth Maul
 ;
 ; Comments start with ;
+; Use |[K to clear to end of line
+; Watch out for trailing spaces -- sometimes this may erase things you intended
+; to show.
 ; Mystic MCI codes are allowed
 
 $theme.name dmaul
 $theme.description Darth Maul mrcX configuration
 $theme.author MeaTLoTioN <ml@erb.pw>
 
-; Configuration Variables ----------------------------------------------------
+$theme.dinfo theme information:
+$theme.dname |04name         |08-> |12&1
+$theme.dauth |04author       |08-> |12&1
+$theme.ddesc |04description  |08-> |12&1
+$theme.dnumb |04string count |08-> |12&1
+
+; Required Theme Strings ----------------------------------------------------
 
 ; Activity Level Meter
-$activity.meter |12dead,|12weak,|12loud,|12pain
+;$activity.meter |12dead,|12weak,|12loud,|12pain
 
-; Johnny 5 support, &1 = Yes/No
-$cfg.johnny5 |12JOHNNY5 is alive: |15&1
+; Listing for /SET values
+$cfg.list |04List of current |12/SET |04values for your account (see help for details)
+$cfg.nickcolor |08[|12NICKCOLOR  |08] |04Nickname colour |08-> &1
+$cfg.nicklt |08[|12NICKLT     |08] |04Nick (left)     |08-> &1
+$cfg.nickrt |08[|12NICKRT     |08] |04Nick (right)    |08-> &1
+$cfg.defaultroom |08[|12DEFAULTRM  |08] |04Default room    |08-> |15&1
+$cfg.timestamp |08[|12TIMESTAMP  |08] |04Use time stamps |08-> |15&1
+$cfg.clock24 |08[|12CLOCK24    |08] |0424-hour clock   |08-> |15&1
+$cfg.lowrefresh |08[|12LOWREFRESH |08] |04Use low refresh |08-> |15&1
+$cfg.topicshow |08[|12TOPICSHOW  |08] |04Show the topic  |08-> |15&1
+$cfg.johnny5 |08[|12JOHNNY5    |08] |04Use Johnny5     |08-> |15&1
+$cfg.mentionbell |08[|12MENTIONBELL|08] |04Beep on mention |08-> |15&1
+$cfg.stealth |08[|12STEALTH    |08] |04Stealth mode    |08-> |15&1
+$cfg.topicreport |08[|12TOPICREPORT|08] |04Topic reporting |08-> |15&1
+$cfg.act1 |08[|12ACT1|08] |08-> |15
+$cfg.act2 |08[|12ACT2|08] |08-> |15
+$cfg.act3 |08[|12ACT3|08] |08-> |15
+$cfg.act4 |08[|12ACT4|08] |08-> |15
+$cfg.act5 |08[|12ACT5|08] |08-> |15
 
-$ mention bell, &1 = on/off
-$cfg.mentionbell |04Beep on mention: |12&1
-
-; Stealth mode on/off, &1 = on/off
-$cfg.stealth |04Stealth mode: |12&1
-
-; Topic Display, &1 = On/Off
-$cfg.topicdisplay |12Topic display: |15&1
+; displayed when user resets all settings to defaults
+$cfg.reset |03Configuration reset to defaults.
+$cfg.resetconfirm Type |15/resetall |03again within |1215 secs |03to reset your account to defaults.
 
 ; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
 $ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
 
+; CTCP Send string, &1 = target, &2 command, &3 options
 $ctcp.send |12[CTCP-SEND] &1 &2 &3
 
 ; CTCP reply prefix, &1 = from, &2 = to, &3 = command
 $ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+$ctcp.stealth |12[CTCP-STEALTHED] &1 &2 &3 &4
 
 ; Line error prefix
 $error.prefix |08!|04!|12! 
@@ -41,6 +64,15 @@ $error.roomlimit Upto 30 characters or I slaughter you
 ; Error topic max length
 $error.topic Upto 55 characters and no more, or feel pain
 
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|12&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|04&1|08] 
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|04Population: |12#&1|08(|12&2|08)]
+
 ; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
 $msg.connecting |12&1 |04has entered |12#&2|04, |12mercy |04is for the |12weak! |08(|04Stealth: |12&3|08)
 
@@ -50,20 +82,14 @@ $msg.helpinfo |04Use |12/? |04or |12/HELP |04for help. |08(|12MRC doesn't yet su
 ; Latency report, &1 = latency
 $msg.latency |04Latency: |12&1
 
+; Low refresh message, shows on startup to users w/ "lowrefresh" on
+$msg.lowrefresh |04Running low refresh rate for slower connections.
+
 ; Room change, &1 = old room, &2 = new room
 $msg.roomchange |04You have left |12#&1 |04and joined |12#&2
 
 ; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
 $msg.stats |04worlds|08(|12&1|08) |04places|08(|12&2|08) |04fools|08(|12&3|08) |04noise|08(|12&4|08)
-
-; LUSERS command Users room/no of users
-$lusers.count |08[|04Population: |12#&1|08(|12&2|08)]
-
-; LUSERS command current entry = me, &1 = name
-$list.highlight |08[|12&1|08] 
-
-; LUSERS command current entry != me, &1 = name
-$list.item |08[|04&1|08] 
 
 ; prompt &1 = name, &2 = room
 $prompt |[X01|[Y24|15&1 |07
@@ -72,7 +98,7 @@ $prompt |[X01|[Y24|15&1 |07
 $print.linewrap \ 
 
 ; Line prefix string
-$print.prefix |08>|04>|12> |07
+$print.prefix |08>|04>|12> |04
 
 ; Mention Indicator
 $print.mention |14>
@@ -95,6 +121,51 @@ $topic.show |04topic for |12#&1 |04is |12&2
 ; Screen Windows size
 $screen.size 1,22
 
+; theme list string
+$theme.list |04Listing themes |08[|12&1|08]|04:
+
+; theme load string, &1 = theme name
+$theme.load |04Loaded theme: |12&1
+
+; theme not found
+$theme.notfound |04Theme not found: |12&1
+
+; theme reload string, &1 = theme name
+$theme.reload |04Reloaded theme: |12&1
+
+; Optional Theme Strings ----------------------------------------------------
+
+; status bar text
+$widget.area |[X01|[Y23|20|00 [lag:   ] [fools:  ]|[K
+
+;$widget.actmeter |[X27|[Y02
+$widget.actmeter0 |00
+$widget.actmeter1 |10>>>>>>>>
+$widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+$widget.actmeter3 |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; BBS count widget
+;$widget.bbses |[X18|[Y22|17|10
+
+; widget buffer count
+;$widget.bufcount |[X07|[Y24|19|15
+
+; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
+;$widget.clock |[X74|[Y02|10&3
+
+; room name, &1 = room name
+;$widget.room |[X08|[Y01|17|10#&1
+
+; max length of room
+;$widget.roomlen 7
+
+; room count
+;$widget.rcount |[X45|[Y04|16|15
+
+; latency in ms, &1 = latency
+;$widget.latency |[X01|[Y01|15&1
+
+; Positioning of the lagmeter
 $widget.lagmeter |[X07|[Y23
 
 ; low, med, bad
@@ -102,30 +173,11 @@ $widget.lagmeter_low |15|20low
 $widget.lagmeter_med |15|20med
 $widget.lagmeter_high3 |15|20die
 
-; latency in ms, &1 = latency
-;$widget.latency |[X01|[Y01|15&1
-
-; status bar text
-$widget.text |[X01|[Y23|20|00 [lag:   ] [fools:  ]
-$widget.area |[X01|[Y23|20|00 [lag:   ] [fools:  ]|[K
-
 ;status bar topic formatting; &1 = Topic
 $widget.topic |[Y23|[X23|20|15&1
 
+; status bar online users (in any room)
+;$widget.ousers |[X48|[Y22|17|10
+
 ;status bar room users formatting; &1 = User Count
 $widget.rusers |[Y23|[X19|20|15&1
-
-; theme list string
-$theme.list |04Listing themes |08[|12&1|08]|04:
-
-; theme load string, &1 = theme name
-$theme.load |04Loaded theme: |12&1
-
-; theme reload string, &1 = theme name
-$theme.reload |04Reloaded theme: |12&1
-
-; Title Bar for help file (not yet implemented)
-$title.help |12Manual
-
-; Title Bar for scrollback viewer (not yet implemented)
-$title.scrollback |12Scrollback buffer

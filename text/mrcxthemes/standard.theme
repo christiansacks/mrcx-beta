@@ -1,0 +1,192 @@
+; mrcX Theme file - Default configuration
+;
+; Comments start with ;
+; Use |[K to clear to end of line
+; Watch out for trailing spaces -- sometimes this may erase things you intended
+; to show.
+; Mystic MCI codes are allowed
+
+$theme.name Default
+$theme.author roovis
+$theme.description Standard 80x25
+
+$theme.dinfo Theme Information:
+$theme.dname Name         |08-> |15&1
+$theme.dauth Author       |08-> |15&1
+$theme.ddesc Description  |08-> |15&1
+$theme.dnumb String count |08-> |15&1
+
+; Required Theme Strings ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |08none,|10LOW,|14MED,|12HIGH
+
+; Listing for /SET values
+$cfg.list List of current |15/SET |03values for your account (see help for details)
+$cfg.nickcolor |09[|10NICKCOLOR  |09] Nickname color  |08-> &1
+$cfg.nicklt |09[|10NICKLT     |09] Nick (left)     |08-> &1
+$cfg.nickrt |09[|10NICKRT     |09] Nick (right)    |08-> &1
+$cfg.defaultroom |09[|10DEFAULTRM  |09] Default room    |08-> |15&1
+$cfg.timestamp |09[|10TIMESTAMP  |09] Use time stamps |08-> |15&1
+$cfg.clock24 |09[|10CLOCK24    |09] 24-Hour clock   |08-> |15&1
+$cfg.lowrefresh |09[|10LOWREFRESH |09] Use low refresh |08-> |15&1
+$cfg.topicshow |09[|10TOPICSHOW  |09] Show the topic  |08-> |15&1
+$cfg.johnny5 |09[|10JOHNNY5    |09] Use Johnny5     |08-> |15&1
+$cfg.mentionbell |09[|10MENTIONBELL|09] Beep on mention |08-> |15&1
+$cfg.stealth |09[|10STEALTH    |09] Stealth mode    |08-> |15&1
+$cfg.topicreport |09[|10TOPICREPORT|09] Topic reporting |08-> |15&1
+$cfg.act1 |09[|10ACT1|09] |08-> |15
+$cfg.act2 |09[|10ACT2|09] |08-> |15
+$cfg.act3 |09[|10ACT3|09] |08-> |15
+$cfg.act4 |09[|10ACT4|09] |08-> |15
+$cfg.act5 |09[|10ACT5|09] |08-> |15
+
+; displayed when user resets all settings to defaults
+$cfg.reset |03Configuration reset to defaults.
+$cfg.resetconfirm Type |15/resetall |03again within |1215 secs |03to reset your account to defaults.
+
+; CTCP Request string, &1 = who from, &2= target, &3 command &4 opts
+$ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
+
+; CTCP Send string, &1 = target, &2 command, &3 options
+$ctcp.send |12[CTCP-SEND] |12&1 &2 &3
+
+; CTCP reply prefix, &1 = to, &2 command, &3 /ctcp = reply
+$ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+$ctcp.stealth |12[CTCP-STEALTHED] &1 &2 &3 &4
+
+; Line error prefix
+$error.prefix |12-> |03
+
+; Error room name max length
+$error.roomlimit Room name is limited to 30 chars max!
+
+; Error topic max length
+$error.topic Topic is limited to 55 chars maximum.
+
+; File viewer - this points to the ini file for internal viewer
+; for scrollback and manual help viewer
+$file.viewer standard-view
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
+
+; List format highlight, &1 = item
+$list.highlight |09[|10&1|09] 
+
+; List format normal, &1 = item
+$list.item |09[|03&1|09] 
+
+; /LUSERS command, &1 = room, &2 = number of users in room
+$lusers.count |09[|03Users |09(|10#&1|09:|10&2|09)]
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth level
+$msg.connecting Connecting to MRC as |10&1 |03in default room |10#&2 |03(Stealth level: |10&3|03)
+
+; Help information
+$msg.helpinfo Use |10/? |03or |10/HELP |03for help. (|12MRC server does not yet support encryption|03)
+
+; Latency report, &1 = latency
+$msg.latency Latency: |10&1
+
+; Low refresh message, shows on startup to users w/ "lowrefresh" on
+$msg.lowrefresh Running low refresh rate for slower connections.
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange You have left |10#&1 |03and joined |10#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats Connected BBSes: |10&1 |03Rooms: |10&2 |03Users: |10&3 |03Activity level: |10&4
+
+; Prompt, absolutely required, &1 = name, &2 = room
+$prompt |[X01|[Y24 |09&2 &1 |08-> 
+
+; Linewrap character
+$print.linewrap  \ 
+
+; Line prefix string
+$print.prefix |08-> |03
+
+; Mention Indicator
+$print.mention |10>
+
+; Time Stamp color, &1 = time
+$print.timestamp |08&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change Topic change |09[|10#&1|09/(|10&2|09)] |15&3
+
+; No topic string, pipe codes not allowed
+$topic.none No Topic
+
+; Previous Topic
+$topic.previous Previous Topic: |15&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show Topic for |10#&1 |03is |15&2
+
+; Screen Windows size
+$screen.size 2,21
+
+; theme list string, &1 = total
+$theme.list Listing themes |09(|03total|09:|10&1|09):
+
+; theme load string, &1 = theme name, &2 = number of strings
+$theme.load Loaded theme: |15&1 |03(|10&2 |03total strings)
+
+; theme not found
+$theme.notfound |12Theme not found: &1
+
+; theme reload string, &1 = theme name, &2 = number of strings
+$theme.reload Reloaded theme: |15&1 |03(|10&2 |03total strings)
+
+; Optional Theme Strings ----------------------------------------------------
+
+; widget area text
+; this draws the entire area for widgets or display an ansi!
+$widget.area |17|03|[X01|[Y01|[K|[X01|[Y22 [      ] [BBSes:   ] [Rooms:  ] [Online Users:  ] [Activity:   ]|[K|[X01|[Y23|[K [Lag:   /   ms] [Room Users:  ]|[X64[Buffer:   /140]|[K
+
+; widget activity meter
+$widget.actmeter |[X62|[Y22
+$widget.actmeter0 |17|15---
+$widget.actmeter1 |10|17LOW
+$widget.actmeter2 |17|14MED
+$widget.actmeter3 |12|17MAX
+
+; BBS count widget
+$widget.bbses |[X18|[Y22|17|10
+
+; widget buffer count
+$widget.bufcount |[X72|[Y23|17|10
+
+; positioning/color of clock
+; &1 = user (6 characters), &2 = 12 hour, &3 = 24 hour
+$widget.clock |[X03|[Y22|17|10&1
+
+; room name, &1 = room name
+;$widget.room |[X08|[Y01|17|10#&1
+
+; max length of room
+;$widget.roomlen 7
+
+; room count
+$widget.rcount |[X30|[Y22|17|10
+
+; Latency in milliseconds, &1 = 3 digit padded latency
+$widget.latency |[X11|[Y23|17|10&1
+
+; Positioning of the lagmeter
+$widget.lagmeter |[X07|[Y23
+
+; low, med, bad
+$widget.lagmeter_low |10|17LOW
+$widget.lagmeter_med |17|14MED
+$widget.lagmeter_high |12|17BAD
+
+;status bar topic formatting; &1 = Topic, &2 = room
+$widget.topic |[X02|[Y01|17|15&1
+
+$widget.ousers |[X48|[Y22|17|10
+
+;status bar room users formatting; &1 = User Count
+$widget.rusers |[X30|[Y23|17|10&1
