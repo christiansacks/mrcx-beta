@@ -44,6 +44,7 @@ doCheckDat() {
       [yY]|[yY][eE][sS])	rm $F; echo "Deleted $F";;
       *)			echo "Leaving users datafile in-tact, expect weirdness!";;
     esac
+  fi
 }
 
 case $ARCH in
