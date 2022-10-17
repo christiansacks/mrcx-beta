@@ -18,7 +18,7 @@ doArm() {
   F=$(find scripts/ -name "*arm*.mpx")
   if [ $F ]; then
     echo "found $F"
-    echo "ln -sf $P/$F ${SCRIPTSDIR}/mrcx-beta.mpx"
+    ln -sf $P/$F ${SCRIPTSDIR}/mrcx-beta.mpx
   fi
 }
 doAmd64() {
@@ -26,7 +26,7 @@ doAmd64() {
   F=$(find scripts/ -name "*amd64*.mpx")
   if [ $F ]; then
     echo "found $F"
-    echo "ln -sf $P/$F ${SCRIPTSDIR}/mrcx-beta.mpx"
+    ln -sf $P/$F ${SCRIPTSDIR}/mrcx-beta.mpx
   fi
 }
 doUnknown() {
@@ -34,7 +34,7 @@ doUnknown() {
   exit 1
 }
 doLinkTexts() {
-  echo "ln -sf $P/text/* ${TEXTDIR}/"
+  ln -sf $P/text/* ${TEXTDIR}/
 }
 doCheckDat() {
   F="${DATADIR}/mrcxusrs.dat"
