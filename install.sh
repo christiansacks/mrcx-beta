@@ -54,3 +54,4 @@ case $ARCH in
 esac
 
 doLinkTexts
+doCheckDat
