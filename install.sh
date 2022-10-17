@@ -8,6 +8,7 @@ MYSTICDIR="/mystic"
 
 P=$(pwd)
 ARCH="$(uname -m)"
+DATADIR="${MYSTICDIR}/data"
 THEMESDIR="${MYSTICDIR}/themes/default"
 SCRIPTSDIR="${THEMESDIR}/scripts"
 TEXTDIR="${THEMESDIR}/text"
@@ -34,6 +35,15 @@ doUnknown() {
 }
 doLinkTexts() {
   echo "ln -sf $P/text/* ${TEXTDIR}/"
+}
+doCheckDat() {
+  F="${DATADIR}/mrcxusrs.dat"
+  if [ $F ]; then
+    echo -n "Found mrcX users datafile, Delete this? (recommended): "; read RESPONSE
+    case $RESPONSE in
+      [yY]|[yY][eE][sS])	rm $F; echo "Deleted $F";;
+      *)			echo "Leaving users datafile in-tact, expect weirdness!";;
+    esac
 }
 
 case $ARCH in
