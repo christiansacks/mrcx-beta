@@ -23,19 +23,20 @@ $theme.dnumb |04string count |08-> |12&1
 
 ; Listing for /SET values
 $cfg.list |04List of current |12/SET |04values for your account (see help for details)
-$cfg.nickcolor |08[|12NICKCOLOR  |08] |04Nickname colour |08-> &1
-$cfg.nicklt |08[|12NICKLT     |08] |04Nick (left)     |08-> &1
-$cfg.nickrt |08[|12NICKRT     |08] |04Nick (right)    |08-> &1
-$cfg.defaultroom |08[|12DEFAULTRM  |08] |04Default room    |08-> |15&1
-$cfg.timestamp |08[|12TIMESTAMP  |08] |04Use time stamps |08-> |15&1
-$cfg.clock24 |08[|12CLOCK24    |08] |0424-hour clock   |08-> |15&1
-$cfg.lowrefresh |08[|12LOWREFRESH |08] |04Use low refresh |08-> |15&1
-$cfg.topicshow |08[|12TOPICSHOW  |08] |04Show the topic  |08-> |15&1
-$cfg.johnny5 |08[|12JOHNNY5    |08] |04Use Johnny5     |08-> |15&1
-$cfg.mentionbell |08[|12MENTIONBELL|08] |04Beep on mention |08-> |15&1
-$cfg.screensize |08[|12SCREENSIZE|08 ] |04Screen size     |08-> |15&1x&2
-$cfg.stealth |08[|12STEALTH    |08] |04Stealth mode    |08-> |15&1
-$cfg.topicreport |08[|12TOPICREPORT|08] |04Topic reporting |08-> |15&1
+$cfg.nickcolor |08[|12NICKCOLOR  |08] |04Nickname colour    |08-> &1
+$cfg.nicklt |08[|12NICKLT     |08] |04Nick (left)        |08-> &1
+$cfg.nickrt |08[|12NICKRT     |08] |04Nick (right)       |08-> &1
+$cfg.defaultroom |08[|12DEFAULTRM  |08] |04Default room       |08-> |15&1
+$cfg.timestamp |08[|12TIMESTAMP  |08] |04Use time stamps    |08-> |15&1
+$cfg.clock24 |08[|12CLOCK24    |08] |0424-hour clock      |08-> |15&1
+$cfg.lowrefresh |08[|12LOWREFRESH |08] |04Use low refresh    |08-> |15&1
+$cfg.topicshow |08[|12TOPICSHOW  |08] |04Show the topic     |08-> |15&1
+$cfg.johnny5 |08[|12JOHNNY5    |08] |04Use Johnny5        |08-> |15&1
+$cfg.mentionbell |08[|12MENTIONBELL|08] |04Beep on mention    |08-> |15&1
+$cfg.scrdetect |08[|12SCRDETECT|08  ] |04Detect screen size |08-> |15&1
+$cfg.screensize |08[|12SCREENSIZE|08 ] |04Screen size        |08-> |15&1x&2
+$cfg.stealth |08[|12STEALTH    |08] |04Stealth mode       |08-> |15&1
+$cfg.topicreport |08[|12TOPICREPORT|08] |04Topic reporting    |08-> |15&1
 $cfg.act1 |08[|12ACT1|08] |08-> |15
 $cfg.act2 |08[|12ACT2|08] |08-> |15
 $cfg.act3 |08[|12ACT3|08] |08-> |15

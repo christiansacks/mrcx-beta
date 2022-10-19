@@ -24,19 +24,20 @@ $activity.meter |08nUll,|10lOw,|14mEd,|12hIgh
 
 ; Listing for /SET values
 $cfg.list |03lIst Of cUrrEnt |15/SET |03vAlUEs fOr yOUr AccOUnt (sEE hElp fOr dEtAIls)
-$cfg.nickcolor |08[|13NICKCOLOR  |08] |05nIcknAmE cOlOUr |08-> &1
-$cfg.nicklt |08[|13NICKLT     |08] |05nIck (lEft)     |08-> &1
-$cfg.nickrt |08[|13NICKRT     |08] |05nIck (rIght)    |08-> &1
-$cfg.defaultroom |08[|13DEFAULTRM  |08] |05dEfAUlt rOOm    |08-> |15&1
-$cfg.timestamp |08[|13TIMESTAMP  |08] |05UsE tImE stAmps |08-> |15&1
-$cfg.clock24 |08[|13CLOCK24    |08] |0524-hOUr clOck   |08-> |15&1
-$cfg.lowrefresh |08[|13LOWREFRESH |08] |05UsE lOw rEfrEsh |08-> |15&1
-$cfg.topicshow |08[|13TOPICSHOW  |08] |05shOw thE tOpIc  |08-> |15&1
-$cfg.johnny5 |08[|13JOHNNY5    |08] |05UsE jOhnnY5     |08-> |15&1
-$cfg.mentionbell |08[|13MENTIONBELL|08] |05bEEp On mEntIOn |08-> |15&1
-$cfg.screensize |08[|13SCREENSIZE|08 ] |05scrEEn sIzE     |08-> |15&1x&2
-$cfg.stealth |08[|13STEALTH    |08] |05stEAlth mOdE    |08-> |15&1
-$cfg.topicreport |08[|13TOPICREPORT|08] |05tOpIc rEpOrtIng |08-> |15&1
+$cfg.nickcolor |08[|13NICKCOLOR  |08] |05nIcknAmE cOlOUr    |08-> &1
+$cfg.nicklt |08[|13NICKLT     |08] |05nIck (lEft)        |08-> &1
+$cfg.nickrt |08[|13NICKRT     |08] |05nIck (rIght)       |08-> &1
+$cfg.defaultroom |08[|13DEFAULTRM  |08] |05dEfAUlt rOOm       |08-> |15&1
+$cfg.timestamp |08[|13TIMESTAMP  |08] |05UsE tImE stAmps    |08-> |15&1
+$cfg.clock24 |08[|13CLOCK24    |08] |0524-hOUr clOck      |08-> |15&1
+$cfg.lowrefresh |08[|13LOWREFRESH |08] |05UsE lOw rEfrEsh    |08-> |15&1
+$cfg.topicshow |08[|13TOPICSHOW  |08] |05shOw thE tOpIc     |08-> |15&1
+$cfg.johnny5 |08[|13JOHNNY5    |08] |05UsE jOhnnY5        |08-> |15&1
+$cfg.mentionbell |08[|13MENTIONBELL|08] |05bEEp On mEntIOn    |08-> |15&1
+$cfg.scrdetect |08[|13SCRDETECT|08  ] |05dEtEct scrEEn sIzE |08-> |15&1
+$cfg.screensize |08[|13SCREENSIZE|08 ] |05scrEEn sIzE        |08-> |15&1x&2
+$cfg.stealth |08[|13STEALTH    |08] |05stEAlth mOdE       |08-> |15&1
+$cfg.topicreport |08[|13TOPICREPORT|08] |05tOpIc rEpOrtIng    |08-> |15&1
 $cfg.act1 |08[|13ACT1|08] |08-> |15
 $cfg.act2 |08[|13ACT2|08] |08-> |15
 $cfg.act3 |08[|13ACT3|08] |08-> |15
