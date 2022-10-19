@@ -33,6 +33,7 @@ $cfg.lowrefresh |08[|13LOWREFRESH |08] |05Use low refresh |08-> |15&1
 $cfg.topicshow |08[|13TOPICSHOW  |08] |05Show the topic  |08-> |15&1
 $cfg.johnny5 |08[|13JOHNNY5    |08] |05Use Johnny5     |08-> |15&1
 $cfg.mentionbell |08[|13MENTIONBELL|08] |05Beep on mention |08-> |15&1
+$cfg.screensize |08[|13SCREENSIZE|08 ] |05Screen size     |08-> |15&1x&2
 $cfg.stealth |08[|13STEALTH    |08] |05Stealth mode    |08-> |15&1
 $cfg.topicreport |08[|13TOPICREPORT|08] |05Topic reporting |08-> |15&1
 $cfg.act1 |08[|13ACT1|08] |08-> |15
@@ -95,7 +96,8 @@ $msg.roomchange |05yOU hAvE lEft |13#&1 |05And jOInEd |13#&2
 $msg.stats |05bbsEs|08(|13&1|08) |05rOOms|08(|13&2|08) |05UsErs|08(|13&3|08) |05ActIvIty|08(|13&4|08)
 
 ; prompt &1 = name, &2 = room
-$prompt |[X01|[Y24|15&1 |07
+$prompt |15&1 |07
+$prompt.loc 1 #1
 
 ; Linewrap character
 $print.linewrap \ 
@@ -122,7 +124,7 @@ $topic.previous |05prEvIOUs tOpIc: |13&1
 $topic.show |05tOpIc fOr |13#&1 |05Is |13&2
 
 ; Screen Windows size
-$screen.size 2,22
+$chat.size 2 #3
 
 ; theme list string
 $theme.list lIstIng thEmEs |08[|15&1|08]|07:
@@ -136,45 +138,41 @@ $theme.notfound thEmE nOt fOUnd: |15&1
 ; theme reload string, &1 = theme name
 $theme.reload |05rElOAdEd thEmE: |13&1
 
-; theme count
-;$theme.count tOtAl thEmEs: |15&1
-
 ; Optional Theme Strings ----------------------------------------------------
 
 ; widget area text
 ; this draws the entire area for widgets or display an ansi!
-$widget.area |[X01|[Y01|19|00 [     ][UsE:   ][lAg:   /   ms|21][rOOm:        ][UsErs:  ]|[K|[X01|[Y23|19|00 [bUf:   |19]|[K
+$widget.area.txt |19|00 [bUf:   |19]|[K|[X01|[Y01|19|00 [     ][UsE:   ][lAg:   /   ms|21][rOOm:        ][UsErs:  ]|[K
+$widget.area.txtloc 1 #2
 
 ; widget activity meter
-$widget.actmeter |[X14|[Y01
+$widget.actmeter.dataloc 14 1
 $widget.actmeter0 |19|15nUl
 $widget.actmeter1 |19|15lOw
 $widget.actmeter2 |19|15mEd
 $widget.actmeter3 |19|15wOw
 
-; BBS count widget
-;$widget.bbses |[X18|[Y22|17|10
-
 ; widget buffer count
-$widget.bufcount |[X07|[Y23|19|15
+$widget.bufcount.data |19|15
+$widget.bufcount.dataloc 7 #2
 
 ; positioning/color of clock, &1 = user (6 characters), &2 = 12 hour, &3 = 24 hour
-$widget.clock |[Y01|[X03|19|15&3
+$widget.clock.data |19|15&3
+$widget.clock.dataloc 3 1
 
 ; room name, &1 = room name
-$widget.room |[X39|[Y01|21|15#&1
+$widget.room.data |21|15#&1
+$widget.room.dataloc 39 1
 
 ; max length of room
-$widget.roomlen 7
-
-; room count
-;$widget.rcount |[X18|[Y01|17|15
+$widget.room.datalen 7
 
 ; latency in ms, &1 = latency
-$widget.latency |[X27|[Y01|19|15&1
+$widget.latency.data |19|15
+$widget.latency.dataloc 27 1
 
 ; Positioning of the lagmeter
-$widget.lagmeter |[X23|[Y01
+$widget.lagmeter.dataloc 23 1
 
 ; low, med, bad
 $widget.lagmeter_low |15|19lOw
@@ -182,10 +180,9 @@ $widget.lagmeter_med |15|19mEd
 $widget.lagmeter_high3 |15|19sOs
 
 ;status bar topic formatting; &1 = Topic
-$widget.topic |[Y23|[X12|21|15&1
-
-; status bar online users (in any room)
-;$widget.ousers |[X48|[Y22|17|10
+$widget.topic.data |21|15 &1
+$widget.topic.dataloc 12 #2
 
 ;status bar room users formatting; &1 = User Count
-$widget.rusers |[Y01|[X55|21|15&1
+$widget.rusers.data |21|15&1
+$widget.rusers.dataloc 55 1

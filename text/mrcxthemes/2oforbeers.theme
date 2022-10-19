@@ -30,6 +30,7 @@ $cfg.lowrefresh |08[|10LOWREFRESH |08] |02Use low refresh |08-> |15&1
 $cfg.topicshow |08[|10TOPICSHOW  |08] |02Show the topic  |08-> |15&1
 $cfg.johnny5 |08[|10JOHNNY5    |08] |02Use Johnny5     |08-> |15&1
 $cfg.mentionbell |08[|10MENTIONBELL|08] |02Beep on mention |08-> |15&1
+$cfg.screensize |08[|10SCREENSIZE|08 ] |02Screen size     |08-> |15&1x&2
 $cfg.stealth |08[|10STEALTH    |08] |02Stealth mode    |08-> |15&1
 $cfg.topicreport |08[|10TOPICREPORT|08] |02Topic reporting |08-> |15&1
 $cfg.act1 |08[|10ACT1|08] |08-> |15
@@ -90,7 +91,8 @@ $msg.roomchange |07yOU hAvE lEft |15#&1 |07And jOInEd |15#&2
 $msg.stats |10bbsEs|08(|10&1|08) |10r00ms|08(|10&2|08) |10UsErs|08(|10&3|08) |10ActIvIty|08(|10&4|08)
 
 ; prompt &1 = name, &2 = room
-$prompt |[X01|[Y24|15&1 |07
+$prompt |15&1 |07
+$prompt.loc 1 #1
 
 ; Linewrap character
 $print.linewrap \ 
@@ -117,7 +119,7 @@ $topic.previous prIOr TOpIc: |10&1
 $topic.show |10tOpIc fOr |15#&1 |10Is |15&2
 
 ; Screen Windows size
-$screen.size 9,23
+$chat.size 9 #2
 
 ; theme list string
 $theme.list |02lIstIng thEmEs |08[|15&1|08]|07:
@@ -136,37 +138,36 @@ $theme.reload |02rElOAdEd thEmE: |15&1
 ; status bar text
 ; this draws the entire area of status bar(s) or display an ansi!
 ; Use Mystic's display file MCI code (I *think* it might work)
-$widget.area |[X01|[Y01|DF2oforbeershdr.ans|
+$widget.file 2oforbeershdr.ans
+$widget.area.dataloc 1 1
 
-$widget.actmeter |[X34|[Y03
+$widget.actmeter.dataloc 34 3
 $widget.actmeter0 |00                                      
 $widget.actmeter1 |09>>>>>>>>                              
 $widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>                  
 $widget.actmeter3 |14>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-; BBS count widget
-;$widget.bbses |[X18|[Y22|17|10
-
-; widget buffer count
-;$widget.bufcount |[X07|[Y24|19|15
-
 ; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
-$widget.clock |[X74|[Y03|15&3
+$widget.clock.data |15&3
+$widget.clock.dataloc 74 3
 
 ; room name, &1 = room name
-$widget.room |[X35|[Y06|15#&1
+$widget.room.data |15#&1
+$widget.room.dataloc 35 6
 
 ; max length of room
-$widget.roomlen 30
+$widget.room.datalen 30
 
 ; room count
-;$widget.rcount |[X18|[Y01|17|15
+;$widget.rcount.data |17|15
+;$widget.rcount.dataloc 18 1
 
 ; latency in ms, &1 = latency
-$widget.latency |[X74|[Y04|15&1
+$widget.latency.data |15
+$widget.latency.dataloc 74 4
 
 ; Positioning of the lagmeter
-$widget.lagmeter |[X34|[Y04
+$widget.lagmeter.dataloc 34 4
 
 ; low, med, bad 
 $widget.lagmeter_low |10>>>>>>>>                              
@@ -174,13 +175,13 @@ $widget.lagmeter_med |14>>>>>>>>>>>>>>>>>>>>
 $widget.lagmeter_high |12>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 ;status bar topic formatting; &1 = Topic
-$widget.topic |[Y08|[X26|15|$C55&1
+$widget.topic.data |15&1
+$widget.topic.dataloc 26 8
 
 ; status bar online users (in any room)
-;$widget.ousers |[X48|[Y22|17|10
+;$widget.ousers.data |17|10
+;$widget.ousers.dataloc 48 #3
 
 ;status bar room users formatting; &1 = User Count
-$widget.rusers |[Y06|[X77|15&1
-
-; room count
-;$widget.rcount |[X45|[Y05|15
+$widget.rusers.data |15&1
+$widget.rusers.dataloc 77 6

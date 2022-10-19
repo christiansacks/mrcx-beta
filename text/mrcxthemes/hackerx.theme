@@ -33,6 +33,7 @@ $cfg.lowrefresh |08[|10LOWREFRESH |08] |02Use low refresh |08-> |15&1
 $cfg.topicshow |08[|10TOPICSHOW  |08] |02Show the topic  |08-> |15&1
 $cfg.johnny5 |08[|10JOHNNY5    |08] |02Use Johnny5     |08-> |15&1
 $cfg.mentionbell |08[|10MENTIONBELL|08] |02Beep on mention |08-> |15&1
+$cfg.screensize |08[|10SCREENSIZE|08 ] |02Screen size     |08-> |15&1x&2
 $cfg.stealth |08[|10STEALTH    |08] |02Stealth mode    |08-> |15&1
 $cfg.topicreport |08[|10TOPICREPORT|08] |02Topic reporting |08-> |15&1
 $cfg.act1 |08[|10ACT1|08] |08-> |15
@@ -91,7 +92,8 @@ $msg.roomchange |02You have left |10#&1 |02and joined |10#&2
 $msg.stats |02bbses|08(|10&1|08) |02rooms|08(|10&2|08) |02users|08(|10&3|08) |02activity|08(|10&4|08)
 
 ; prompt &1 = name, &2 = room
-$prompt |[X01|[Y24|15&1 |07
+$prompt |15&1 |07
+$prompt.loc 1 #1
 
 ; Linewrap character
 $print.linewrap \ 
@@ -118,7 +120,7 @@ $topic.previous |02prior topic: |10&1
 $topic.show |02topic for |10#&1 |02is |10&2
 
 ; Screen Windows size
-$screen.size 7,23
+$chat.size 7 #2
 
 ; theme list string
 $theme.list |02L1571N6 7H3M35 |08[|10&1|08]|02:
@@ -135,37 +137,25 @@ $theme.reload |02Reloaded theme: |10&1
 ; Optional Theme Strings ----------------------------------------------------
 
 ; status bar text
-$widget.area |[X01|[Y01|DFhackerxhdr.asc|
+$widget.file hackerxhdr.asc
+$widget.area.loc 1 1
 
-$widget.actmeter |[X27|[Y02
+$widget.actmeter.dataloc 27 2
 $widget.actmeter0 |00                                             
 $widget.actmeter1 |10>>>>>>>>                                     
 $widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>               
 $widget.actmeter3 |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-; BBS count widget
-;$widget.bbses |[X18|[Y22|17|10
-
-; widget buffer count
-;$widget.bufcount |[X07|[Y24|19|15
-
 ; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
-$widget.clock |[X74|[Y02|10&3
-
-; room name, &1 = room name
-;$widget.room |[X08|[Y01|17|10#&1
-
-; max length of room
-;$widget.roomlen 7
-
-; room count
-;$widget.rcount |[X45|[Y04|16|15
+$widget.clock.data |10&3
+$widget.clock.dataloc 74 2
 
 ; latency in ms, &1 = latency
-$widget.latency |[X74|[Y03|10&1
+$widget.latency.data |10
+$widget.latency.dataloc 74 3
 
 ; Positioning of the lagmeter
-$widget.lagmeter |[X27|[Y03
+$widget.lagmeter.dataloc 27 3
 
 ; low, med, bad 
 $widget.lagmeter_low |10>>>>>>>>                                  
@@ -173,10 +163,5 @@ $widget.lagmeter_med |10>>>>>>>>>>>>>>>>>>>>
 $widget.lagmeter_high |10>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 ;status bar topic formatting; &1 = Topic
-$widget.topic |[Y06|[X22|10&1
-
-; status bar online users (in any room)
-;$widget.ousers |[X48|[Y22|17|10
-
-;status bar room users formatting; &1 = User Count
-;$widget.rusers |[Y23|[X19|15&1
+$widget.topic.data |10&1
+$widget.topic.dataloc 22 6
