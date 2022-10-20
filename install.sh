@@ -38,7 +38,7 @@ doLinkTexts() {
 }
 doCheckDat() {
   F="${DATADIR}/mrcxusrs.dat"
-  if [ $F ]; then
+  if [ -f $F ]; then
     echo -n "Found mrcX users datafile, Delete this? (recommended): "; read RESPONSE
     case $RESPONSE in
       [yY]|[yY][eE][sS])	rm $F; echo "Deleted $F";;
@@ -46,6 +46,13 @@ doCheckDat() {
     esac
   fi
 }
+doCheckMystic() {
+  if [[ ! -d $MYSTICDIR ]]; then
+    echo "No Mystic installation found in $MYSTICDIR, aborting!"
+    exit 1
+  fi
+}
+doCheckMystic
 
 case $ARCH in
   "aarch32")	doArm;;
