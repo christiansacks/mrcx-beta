@@ -57,11 +57,17 @@ $ctcp.send |12[CTCP-SEND] |12&1 &2 &3
 $ctcp.reply |12[CTCP-REPLY] &1 &2 &3
 $ctcp.stealth |12[CTCP-STEALTHED] &1 &2 &3 &4
 
+; Chat resumed error
+$error.chatresumed Chat resumed, older messages omitted.
+
 ; Line error prefix
 $error.prefix |12-> |03
 
 ; Error room name max length
 $error.roomlimit Room name is limited to 30 chars max!
+
+; Error for invalid /set screensize parameters
+$error.screensize Must use /set screensize ## ##, ex: /set screensize 80 24
 
 ; Error topic max length
 $error.topic Topic is limited to 55 chars maximum.

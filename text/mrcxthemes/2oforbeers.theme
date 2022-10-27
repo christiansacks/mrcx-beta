@@ -54,7 +54,6 @@ $ctcp.send |12[CTCP-SEND] &1 &2 &3
 $ctcp.reply |12[CTCP-REPLY] &1 &2 &3
 $ctcp.stealth |12[CTCP-STEALTHED] &1 &2 &3 &4
 
-
 ; Line error prefix
 $error.prefix |08!|04!|12! 
 
@@ -63,6 +62,12 @@ $error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx
 
 ; Error topic max length
 $error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm
+
+; Chat resumed error
+$error.chatresumed chAt rEsUmEd, OldEr mEssAgEs OmIttEd.
+
+; Error for invalid /set screensize parameters
+$error.screensize mUst UsE /sEt scrEEnsIzE ## ##, Ex: /sEt scrEEnsIzE 80 24
 
 ; LUSERS command current entry = me, &1 = name
 $list.highlight |08[|10&1|08] 
@@ -135,6 +140,9 @@ $theme.notfound |02thEmE nOt fOUnd: |10&1
 $theme.reload |02rElOAdEd thEmE: |15&1
 
 ; Optional Theme Strings ----------------------------------------------------
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
 
 ; status bar text
 ; this draws the entire area of status bar(s) or display an ansi!

@@ -63,6 +63,12 @@ $error.roomlimit |14Error: |06room name can be maximum of 30 characters
 ; Error topic max length
 $error.topic |14Error: |06topic can be maximum of 55 characters
 
+; Chat resumed error
+$error.chatresumed |06Chat resumed, older messages omitted.
+
+; Error for invalid /set screensize parameters
+$error.screensize |06Must use /set screensize ## ##, ex: /set screensize 80 24
+
 ; LUSERS command current entry = me, &1 = name
 $list.highlight |08[|14&1|08] 
 
@@ -134,6 +140,9 @@ $theme.notfound |06Theme not found: |14&1
 $theme.reload |06Reloaded theme: |14&1
 
 ; Optional Theme Strings ----------------------------------------------------
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
 
 ; status bar text
 ; this draws the entire area of status bar(s) or display an ansi!

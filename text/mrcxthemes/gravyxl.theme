@@ -67,6 +67,12 @@ $error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx
 ; Error topic max length
 $error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm
 
+; Chat resumed error
+$error.chatresumed chAt rEsUmEd, OldEr mEssAgEs OmIttEd.
+
+; Error for invalid /set screensize parameters
+$error.screensize mUst UsE /sEt scrEEnsIzE ## ##, Ex: /sEt scrEEnsIzE 80 24
+
 ; File viewer - this points to the ini file for internal viewer
 ; for scrollback and manual help viewer
 $file.viewer gravyxl-view
@@ -142,6 +148,9 @@ $theme.notfound |04thEmE nOt fOUnd: |12&1
 $theme.reload rElOAdEd thEmE: |15&1
 
 ; Optional Theme Strings ----------------------------------------------------
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
 
 ; widget area text
 ; this draws the entire area for widgets or display an ansi!

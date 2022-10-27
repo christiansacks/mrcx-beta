@@ -65,6 +65,12 @@ $error.roomlimit Error: room name can be maximum of 30 characters
 ; Error topic max length
 $error.topic Error: topic can be maximum of 55 characters
 
+; Chat resumed error
+$error.chatresumed Chat resumed, older messages omitted.
+
+; Error for invalid /set screensize parameters
+$error.screensize Must use /set screensize ## ##, Ex: /set screensize 80 24
+
 ; LUSERS command current entry = me, &1 = name
 $list.highlight |08[|10&1|08] 
 
@@ -136,6 +142,9 @@ $theme.notfound |02Theme not found: |10&1
 $theme.reload |02Reloaded theme: |10&1
 
 ; Optional Theme Strings ----------------------------------------------------
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
 
 ; status bar text
 $widget.file hackerxhdr.asc

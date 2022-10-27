@@ -65,6 +65,12 @@ $error.roomlimit rOOm nAmE Is lImItEd tO 30 chArs mAx
 ; Error topic max length
 $error.topic tOpIc Is lImItEd tO 55 chArs mAxImUm
 
+; Chat resumed error
+$error.chatresumed chAt rEsUmEd, OldEr mEssAgEs OmIttEd.
+
+; Error for invalid /set screensize parameters
+$error.screensize mUst UsE /sEt scrEEnsIzE ## ##, Ex: /sEt scrEEnsIzE 80 24
+
 ; LUSERS command current entry = me, &1 = name
 $list.highlight |08[|13&1|08] 
 
@@ -137,6 +143,9 @@ $theme.notfound |04thEmE nOt fOUnd: |12&1
 $theme.reload rElOAdEd thEmE: |15&1
 
 ; Optional Theme Strings ----------------------------------------------------
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
 
 ; widget area text
 ; this draws the entire area of status bar(s) or display an ansi!
