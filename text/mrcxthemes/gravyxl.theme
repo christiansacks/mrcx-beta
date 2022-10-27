@@ -154,7 +154,7 @@ $file.startart mrcx-logo
 
 ; widget area text
 ; this draws the entire area for widgets or display an ansi!
-$widget.file gravyxhdr.ans
+$widget.file gravyxlhdr.ans
 $widget.area.txt |19|00 [bUf:   |19]|[K|16
 $widget.area.txtloc 1 #2
 
