@@ -18,7 +18,7 @@ doArm() {
   F=$(find scripts/ -name "*arm*.mpx")
   if [ $F ]; then
     echo "found $F"
-    ln -sf $P/$F ${SCRIPTSDIR}/mrcx-beta.mpx
+    ln -sf $P/$F ${SCRIPTSDIR}/mrcx.mpx
   fi
 }
 doAmd64() {
@@ -26,7 +26,7 @@ doAmd64() {
   F=$(find scripts/ -name "*amd64*.mpx")
   if [ $F ]; then
     echo "found $F"
-    ln -sf $P/$F ${SCRIPTSDIR}/mrcx-beta.mpx
+    ln -sf $P/$F ${SCRIPTSDIR}/mrcx.mpx
   fi
 }
 doUnknown() {
