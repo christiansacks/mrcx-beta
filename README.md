@@ -7,12 +7,12 @@ Copy or link the binary required to your $MYSTIC_HOME/themes/default/scripts dir
 
 To copy;
 ```
-cp scripts/mrcx-0.30-beta-amd64-a48.mpx /mystic/themes/default/scripts/mrcx.mpx
+cp scripts/mrcx-0.31-beta-amd64-a48.mpx /mystic/themes/default/scripts/mrcx.mpx
 ```
 
 or to link (preferred if you're using linux)
 ```
-ln -s ./scripts/mrcx-0.30-beta-amd64-a48.mpx /mystic/themes/default/scripts/mrcx.mpx
+ln -sf ./scripts/mrcx-0.31-beta-amd64-a48.mpx /mystic/themes/default/scripts/mrcx.mpx
 ```
 
 Next copy or link the contents of the text dir into your $MYSTIC_HOME/themes/default/text dir, for example:
@@ -24,7 +24,7 @@ cp -rv text/* /mystic/themes/default/text/
 
 or to link (preferred if you're using linux)
 ```
-ln -s ./text/* /mystic/themes/default/text/
+ln -sf ./text/* /mystic/themes/default/text/
 ```
 
 Now add a menu item in Mystic CFG like this;
