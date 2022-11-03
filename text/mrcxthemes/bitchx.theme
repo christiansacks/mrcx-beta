@@ -11,10 +11,10 @@ $theme.author roovis
 $theme.description BitchX Theme for mrcX
 
 $theme.dinfo Theme Information:
-$theme.dname Name         |08-> |15&1
-$theme.dauth Author       |08-> |15&1
-$theme.ddesc Description  |08-> |15&1
-$theme.dnumb String count |08-> |15&1
+$theme.dname Name   |08: |15&1
+$theme.dauth Author |08: |15&1
+$theme.ddesc Descr  |08: |15&1
+$theme.dnumb Strings|08: |15&1
 
 ; Required Theme Strings ----------------------------------------------------
 

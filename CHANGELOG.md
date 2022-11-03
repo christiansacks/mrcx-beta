@@ -1,3 +1,10 @@
+
+
+.32 (Nov 3 22)
+- Code cleanups
+- Fixed /bw command
+- Improved logging
+
 .31 (Oct 26 22)
 - fixed crash when using /set screensize w/ no parameters
 - new theme string displayed when wrong parameters 
