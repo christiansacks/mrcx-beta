@@ -1,6 +1,13 @@
 # mrcx
 mrcx client written by roovis
 
+
+# pre-requisites
+
+mrcX is just an alternative MRC client for Mystic BBS so you will need to already have a working MRC client/installation on your BBS.
+Once you have that, mrcX should be a simple drop in addition/replacement.
+
+
 # installation
 
 Copy or link the binary required to your $MYSTIC_HOME/themes/default/scripts dir, for example if you need the amd64 binary:
