@@ -51,7 +51,7 @@ Now add a menu item in Mystic CFG like this;
 ║ Timer Type    │ Every <timer> interval            │ Home   00    End     00 ║
 ║                                                                             ║
 ║ Action List ────────────── Access ───── Data ─────────────────────────────  ║
-║ (GX) Execute MPL program   OK           mrcx                                █
+║ (GX) Execute MPL program                mrcx                                █
 ║                                                                             ░
 ║                                                                             ░
 ║                                                                             ░
