@@ -1,0 +1,196 @@
+; mrcX Theme file - Christmas
+;
+; Comments start with ;
+; Mystic MCI codes are allowed
+
+$theme.name Christmas
+$theme.description Christmas
+$theme.author cozmo
+
+$theme.dinfo |04T|02heme |04I|02nformation:
+$theme.dname |04N|02ame         |08-> |10&1
+$theme.dauth |04A|02uthor       |08-> |10&1
+$theme.ddesc |04D|02escription  |08-> |10&1
+$theme.dnumb |04S|02tring |04C|02ount |08-> |10&1
+
+; Required Theme Strings ----------------------------------------------------
+
+; Activity Level Meter
+$activity.meter |08null,|10low,|14med,|12high
+
+; Listing for /SET values
+$cfg.list |02List of current |10/SET |02values for your account (see help for details)
+$cfg.nickcolor |08[|10NICKCOLOR  |08] |02Nickname colour    |08-> &1
+$cfg.nicklt |08[|10NICKLT     |08] |02Nick (left)        |08-> &1
+$cfg.nickrt |08[|10NICKRT     |08] |02Nick (right)       |08-> &1
+$cfg.defaultroom |08[|10DEFAULTRM  |08] |02Default room       |08-> |15&1
+$cfg.timestamp |08[|10TIMESTAMP  |08] |02Use time stamps    |08-> |15&1
+$cfg.clock24 |08[|10CLOCK24    |08] |0224-hour clock      |08-> |15&1
+$cfg.lowrefresh |08[|10LOWREFRESH |08] |02Use low refresh    |08-> |15&1
+$cfg.topicshow |08[|10TOPICSHOW  |08] |02Show the topic     |08-> |15&1
+$cfg.johnny5 |08[|10JOHNNY5    |08] |02Use Johnny5        |08-> |15&1
+$cfg.mentionbell |08[|10MENTIONBELL|08] |02Beep on mention    |08-> |15&1
+$cfg.scrdetect |08[|10SCRDETECT|08  ] |02Detect screen size |08-> |15&1
+$cfg.screensize |08[|10SCREENSIZE|08 ] |02Screen size        |08-> |15&1x&2
+$cfg.stealth |08[|10STEALTH    |08] |02Stealth mode       |08-> |15&1
+$cfg.topicreport |08[|10TOPICREPORT|08] |02Topic reporting    |08-> |15&1
+$cfg.act1 |08[|10ACT1|08] |08-> |15
+$cfg.act2 |08[|10ACT2|08] |08-> |15
+$cfg.act3 |08[|10ACT3|08] |08-> |15
+$cfg.act4 |08[|10ACT4|08] |08-> |15
+$cfg.act5 |08[|10ACT5|08] |08-> |15
+
+; displayed when user resets all settings to defaults
+$cfg.reset |03Configuration reset to defaults.
+$cfg.resetconfirm Type |15/resetall |03again within |1215 secs |03to reset your account to defaults.
+
+; CTCP send out string, &1 = from &2 = to, &3 command &4 opts
+$ctcp.request |12[CTCP-REQUEST] &1 &2 &3 &4
+
+; CTCP Send string, &1 = target, &2 command, &3 options
+$ctcp.send |12[CTCP-SEND] &1 &2 &3
+
+; CTCP reply prefix, &1 = from, &2 = to, &3 = command
+$ctcp.reply |12[CTCP-REPLY] &1 &2 &3
+$ctcp.stealth |12[CTCP-STEALTHED] &1 &2 &3 &4
+
+; Line error prefix
+$error.prefix |08!|04!|12! 
+
+; Error room name max length
+$error.roomlimit Room name is limited to 30 chars max
+
+; Error topic max length
+$error.topic Topic is limited to 55 chars maximum
+
+; Chat resumed error
+$error.chatresumed Chat resumed, older messages omitted.
+
+; Error for invalid /set screensize parameters
+$error.screensize Must use /set screenseze ## ##, Ex: /set screenize 80 24
+
+; LUSERS command current entry = me, &1 = name
+$list.highlight |08[|10&1|08] 
+
+; LUSERS command current entry != me, &1 = name
+$list.item |08[|02&1|08] 
+
+; LUSERS command Users room/no of users
+$lusers.count |08[|04U|02s|04e|02r|04s: |15#&1|08(|15&2|08)]
+
+; Connection to MRC message &1 = user name, &2 = default room, &3 stealth on/off
+$msg.connecting |10C|02onnecting |10t|02o |15MRC |10A|02s |10&1 |10I|02n |10d|02efault |10r|02oom |15#&2 |08(|02stealth: |10&3|08)
+
+; Help information
+$msg.helpinfo |10U|02se |15/? |10o|02r |15/HELP |10f|02or help. |24|08(|12MRC doesn't yet support Encryption|08)|16
+
+; Latency report, &1 = latency
+$msg.latency |10Latency: |15&1
+
+; Low refresh message, shows on startup to users w/ "lowrefresh" on
+$msg.lowrefresh |02Running low refresh rate for slower connections.
+
+; Room change, &1 = old room, &2 = new room
+$msg.roomchange |07You have left |15#&1 |07and joined |15#&2
+
+; Stats from the BBS, &1 = BBSES, &2 = ROOMS, &3 = USERS, &4 ACTIVITY LEVEL
+$msg.stats |10BBSes|08(|10&1|08) |10Rooms|08(|10&2|08) |10Users|08(|10&3|08) |10Activity|08(|10&4|08)
+
+; prompt &1 = name, &2 = room
+$prompt |15&1 |07
+$prompt.loc 1 #1
+
+; Linewrap character
+$print.linewrap \ 
+
+; Line prefix string
+$print.prefix |08>|02>|10> |02
+
+; Mention Indicator
+$print.mention |24|14$
+
+; Time Stamp color, &1 = time
+$print.timestamp |02&1
+
+; Topic Change, &1 = room, &2 = who changed topic, &3 = new topic
+$topic.change |10&2 |10j|02ust |10c|02hanged |10t|02he |10t|02opic
+
+; No topic string, pipe codes not allowed
+$topic.none                  >>> No topic set <<<
+
+; Previous Topic
+$topic.previous Prior Topic: |10&1
+
+; Show Current Topic, &1 = room, &2 = topic
+$topic.show |10Topic fOr |15#&1 |10Is |15&2
+
+; Screen Windows size
+$chat.size 9 #2
+
+; theme list string
+$theme.list |04L|02isting |04T|02hemes |08[|15&1|08]|07:
+
+; theme load string, &1 = theme name
+$theme.load |02Loaded Theme: |15&1
+
+; theme not found
+$theme.notfound |02Theme not found: |10&1
+
+; theme reload string, &1 = theme name
+$theme.reload |02Reloaded Theme: |15&1
+
+; Optional Theme Strings ----------------------------------------------------
+
+; startup logo prefix here, randomly chosen .000-.999 files
+$file.startart mrcx-logo
+
+; status bar text
+; this draws the entire area of status bar(s) or display an ansi!
+; Use Mystic's display file MCI code (I *think* it might work)
+$widget.file christmas.ans
+$widget.area.dataloc 1 1
+
+$widget.actmeter.dataloc 34 3
+$widget.actmeter0 |00                                      
+$widget.actmeter1 |09>>>>>>>>                              
+$widget.actmeter2 |10>>>>>>>>>>>>>>>>>>>>                  
+$widget.actmeter3 |14>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+; positioning/color of clock, &1 = user, &2 = 12h, &3 = 24h
+$widget.clock.data |15&3
+$widget.clock.dataloc 73 3
+
+; room name, &1 = room name
+$widget.room.data |15#&1
+$widget.room.dataloc 35 6
+
+; max length of room
+$widget.room.datalen 30
+
+; room count
+;$widget.rcount.data |17|15
+;$widget.rcount.dataloc 18 1
+
+; latency in ms, &1 = latency
+$widget.latency.data |15
+$widget.latency.dataloc 73 4
+
+; Positioning of the lagmeter
+$widget.lagmeter.dataloc 34 4
+
+; low, med, bad 
+$widget.lagmeter_low |10>>>>>>>>                              
+$widget.lagmeter_med |14>>>>>>>>>>>>>>>>>>>>                  
+$widget.lagmeter_high |12>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+;status bar topic formatting; &1 = Topic
+$widget.topic.data |15&1
+$widget.topic.dataloc 26 8
+
+; status bar online users (in any room)
+;$widget.ousers.data |17|10
+;$widget.ousers.dataloc 48 #3
+
+;status bar room users formatting; &1 = User Count
+$widget.rusers.data |15&1
+$widget.rusers.dataloc 76 6
